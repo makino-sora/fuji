@@ -80,6 +80,16 @@
 
           scene.add(sprite);
         }
+        var textureLoader1 = new THREE.TextureLoader();
+        var texture1 = textureLoader1.load("jyari.jpg");
+        var mat1 = new THREE.MeshPhongMaterial();
+        mat1.map = texture1;
+         var planeGeometry = new THREE.PlaneGeometry(5,5,5,5);
+        
+        var plane = new THREE.Mesh(planeGeometry,mat1);
+        plane.rotation.set( -Math.PI/2, 0, 0 );
+        plane.position.set(0,0,0);
+        scene.add(plane);
         update();
 
         // 毎フレーム時に実行されるループイベントです
