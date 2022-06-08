@@ -64,12 +64,12 @@
         scene.add(sprite1);
 
          // 木をスプライトで作成
-        var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("sakura1.png");
-        const material = new THREE.SpriteMaterial({ map: texture,});
+        var textureLoader2 = new THREE.TextureLoader2();  
+        var texture2 = textureLoader2.load("sakura1.png");
+        const material = new THREE.SpriteMaterial({ map: texture2,});
 
         // 森を作成
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 10; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
           sprite.position.x = 2 * (Math.random() - 0.5);
