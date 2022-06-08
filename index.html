@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
- <h1>第八回no出席確認</h1>
+ <h1>第八回出席確認</h1>
 <p>ビルボードを用いて富士山の風景を作りました。</p>
  <p>透過が上手くいかなかったのでphotoshopで画像を切り抜きました。</p>
  <script>
@@ -64,13 +64,13 @@
         scene.add(sprite1);
 
          // 木をスプライトで作成
-        var textureLoader = new THREE.TextureLoader();  
-        var texture2 = textureLoader.load("sakura1.png");
-        const material2 = new THREE.SpriteMaterial({ map: texture2,});
+        var textureLoader2 = new THREE.TextureLoader2();  
+        var texture2 = textureLoader2.load("sakura1.png");
+        const material = new THREE.SpriteMaterial({ map: texture2,});
 
         // 森を作成
         for (let i = 0; i < 10; i++) {
-          const sprite = new THREE.Sprite(material2);
+          const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
           sprite.position.x = 2 * (Math.random() - 0.5);
           sprite.position.y = 0.5 * Math.random();
